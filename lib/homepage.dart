@@ -1,5 +1,6 @@
 import 'package:memebuddy/pages/home.dart';
 import 'package:flutter/material.dart';
+import 'package:memebuddy/pages/meme.dart';
 import 'package:memebuddy/pages/profile.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -13,7 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   List<Widget> tabPages = [
     Home(),
-    Profile(),
+    Meme(),
     Profile(),
   ];
 
@@ -35,6 +36,42 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.deepPurple,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.notification_important_outlined,
+              color: Colors.black54,
+            ),
+            onPressed: () {
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return new SingleChildScrollView(
+                      child: new ConstrainedBox(
+                        constraints: new BoxConstraints(),
+                        child: new Container(
+                          child: new Center(
+                            child: Dialog(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0)),
+                              child: Container(
+                                height: 700,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(12.0),
+                                  child: Column(
+                                    children: [],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  });
+            },
+          )
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _pageIndex,
