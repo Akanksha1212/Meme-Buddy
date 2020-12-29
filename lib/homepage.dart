@@ -39,8 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: <Widget>[
           IconButton(
             icon: Icon(
-              Icons.notification_important_outlined,
-              color: Colors.black54,
+              Icons.notifications,
+              color: Colors.white,
             ),
             onPressed: () {
               showDialog(

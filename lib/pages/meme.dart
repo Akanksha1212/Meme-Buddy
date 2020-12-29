@@ -15,8 +15,8 @@ class _MemeState extends State<Meme> {
     "https://humornama.com/wp-content/uploads/2020/06/programmers-law-meme.jpg",
     "https://i.redd.it/ogyytgglkln51.jpg",
     "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Programming-Memes-Programmer-while-sleeping.jpg?x46841",
-    "https://www.testbytes.net/wp-content/uploads/2019/06/Untitled-63.png",
-    "https://miro.medium.com/max/1920/0*z1mm6izqSeDiKukb",
+    "https://s3.amazonaws.com/rails-camp-tutorials/blog/programming+memes/programming-or-googling.jpg",
+    "https://i.imgflip.com/4bwkf2.jpg",
     "https://humornama.com/wp-content/uploads/2020/06/programmers-law-meme.jpg",
     "https://i.redd.it/ogyytgglkln51.jpg",
     "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Programming-Memes-Programmer-while-sleeping.jpg?x46841",
@@ -37,7 +37,8 @@ class _MemeState extends State<Meme> {
                 child: new ConstrainedBox(
               constraints: new BoxConstraints(),
               child: Center(
-                child: Container(
+                  child: Column(children: [
+                Container(
                   height: MediaQuery.of(context).size.height * 0.6,
                   child: new TinderSwapCard(
                     swipeUp: true,
@@ -73,7 +74,39 @@ class _MemeState extends State<Meme> {
                     },
                   ),
                 ),
-              ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // FloatingActionButton(
+                    //   backgroundColor: Colors.white,
+                    //   child: Image.network(
+                    //       'https://cdn.iconscout.com/icon/free/png-256/bookmark-ribbon-mark-favourite-tick-marker-7-3237.png'),
+                    //   onPressed: () {
+                    //     // Add your onPressed code here!
+                    //   },
+                    // ),
+                    FloatingActionButton.extended(
+                      label: Text('Bookmark'),
+                      backgroundColor: Colors.pink,
+                      icon: Icon(Icons.bookmark),
+                      onPressed: () {
+                        // Add your onPressed code here!
+                      },
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    FloatingActionButton.extended(
+                      label: Text('Send'),
+                      backgroundColor: Colors.pink,
+                      icon: Icon(Icons.message),
+                      onPressed: () {
+                        // Add your onPressed code here!
+                      },
+                    )
+                  ],
+                )
+              ])),
             ))));
   }
 }
