@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "676357632662",
+    "project_id": "memebuddy-5c534",
+    "storage_bucket": "memebuddy-5c534.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676357632662:android:22a4d159e7f56978d148b7",
+        "android_client_info": {
+          "package_name": "com.example.memebuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676357632662-rk40alh4t0bgq5pjfsu33vuq95968lgk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.memebuddy",
+            "certificate_hash": "3e7ccb9a7ea1e3c703464d6a0ee5829afc9dd288"
+          }
+        },
+        {
+          "client_id": "676357632662-qhj5l0builv5pi5l9uf52crvmv1kjo0v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzPv4HEdMQVgpb3ZaaQ-SqzbTSAySBRsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676357632662-qhj5l0builv5pi5l9uf52crvmv1kjo0v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
