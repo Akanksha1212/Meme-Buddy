@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:memebuddy/sign/logsign.dart';
 import 'package:memebuddy/sign/sign_in.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -20,83 +21,92 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.all(20.0),
             color: Colors.deepPurple[100],
             child: new SingleChildScrollView(
-                child: new ConstrainedBox(
-              constraints: new BoxConstraints(),
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft,
-                    colors: [Colors.blue[100], Colors.blue[400]],
-                  ),
-                ),
+              child: new ConstrainedBox(
+                constraints: new BoxConstraints(),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                          imageUrl,
-                        ),
-                        radius: 60,
-                        backgroundColor: Colors.transparent,
-                      ),
-                      SizedBox(height: 40),
-                      Text(
-                        'NAME',
-                        style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black54),
-                      ),
-                      Text(
-                        name,
-                        style: TextStyle(
-                            fontSize: 25,
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        'EMAIL',
-                        style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black54),
-                      ),
-                      Text(
-                        email,
-                        style: TextStyle(
-                            fontSize: 25,
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(height: 40),
-                      RaisedButton(
-                        onPressed: () {
-                          signOutGoogle();
-                          Navigator.of(context).pushAndRemoveUntil(
-                              MaterialPageRoute(builder: (context) {
-                            return SignIn();
-                          }), ModalRoute.withName('/'));
-                        },
-                        color: Colors.deepPurple,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            'Sign Out',
-                            style: TextStyle(fontSize: 25, color: Colors.white),
+                      Image.network(
+                          'https://cdn.dribbble.com/users/427368/screenshots/4623525/artboard_3.jpg?compress=1&resize=800x600'),
+                      SizedBox(height: 15),
+                      GestureDetector(
+                        child: Container(
+                          height: 350,
+                          child: Card(
+                            child: Container(
+                                constraints: BoxConstraints.expand(),
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            'https://images.indianexpress.com/2020/12/LOOKBACK-1.jpg'),
+                                        fit: BoxFit.cover)),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      "",
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 36),
+                                    )
+                                  ],
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                )),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(40.0),
+                            ),
+                            elevation: 5,
+                            margin: EdgeInsets.all(10),
                           ),
                         ),
-                        elevation: 5,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40)),
-                      )
+                        onTap: () async {
+                          const url =
+                              'https://indianexpress.com/article/trending/trending-globally/top-memes-that-ruled-social-media-in-2020-7123217/';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          } else {
+                            throw 'Could not launch $url';
+                          }
+                        },
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      GestureDetector(
+                          child: Container(
+                            height: 350,
+                            child: Card(
+                              child: Container(
+                                  constraints: BoxConstraints.expand(),
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                              'https://cdn.dribbble.com/users/677572/screenshots/14547579/media/cc72f3e771cfa888c90efae62dd1b3b3.png?compress=1&resize=1000x750'),
+                                          fit: BoxFit.cover)),
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        "",
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 36),
+                                      )
+                                    ],
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                  )),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(40.0),
+                              ),
+                              elevation: 5,
+                              margin: EdgeInsets.all(10),
+                            ),
+                          ),
+                          onTap: () {
+                            null;
+                          }),
                     ],
                   ),
                 ),
               ),
-            ))));
+            )));
   }
 }

@@ -25,7 +25,8 @@ class ProfileState extends State<Profile> {
                   child: new Center(
                       child: new Column(children: [
                     new CircleAvatar(
-                      backgroundImage: AssetImage('assets/images/user.png'),
+                      backgroundImage: NetworkImage(
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoHZSUi7psB3fr3i9DLrik1JGtWX7USZ7R3w&usqp=CAU'),
                       radius: 50,
                     ),
                     new Padding(padding: EdgeInsets.only(top: 20.0)),
@@ -73,11 +74,68 @@ class ProfileState extends State<Profile> {
                       ),
                     ),
                     new Padding(padding: EdgeInsets.only(top: 20.0)),
+                    DropDownButtonGender(),
+                    new Padding(padding: EdgeInsets.only(top: 20.0)),
+                    Text(
+                      'Meme Quotient',
+                      style: GoogleFonts.lato(
+                          textStyle: TextStyle(
+                              color: Colors.black87,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                    Slider(
+                      value: 75,
+                      min: 0,
+                      max: 100,
+                      divisions: 5,
+                      activeColor: Colors.deepPurple[300],
+                      inactiveColor: Colors.deepPurple[300],
+                      onChanged: (double value) {},
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          '\0',
+                          style: GoogleFonts.lato(
+                              textStyle: TextStyle(
+                                  color: Colors.black45,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600)),
+                        ),
+                        Text(
+                          '\100',
+                          style: GoogleFonts.lato(
+                              textStyle: TextStyle(
+                                  color: Colors.black45,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600)),
+                        )
+                      ],
+                    ),
+                    new Padding(padding: EdgeInsets.only(top: 20.0)),
+                    new TextFormField(
+                      decoration: new InputDecoration(
+                        labelText: "Fun facts about you",
+                        fillColor: Colors.white,
+                        border: new OutlineInputBorder(
+                          borderRadius: new BorderRadius.circular(25.0),
+                          borderSide: new BorderSide(),
+                        ),
+                      ),
+                      keyboardType: TextInputType.multiline,
+                      maxLines: 3,
+                      style: new TextStyle(
+                        fontFamily: "Poppins",
+                      ),
+                    ),
+                    new Padding(padding: EdgeInsets.only(top: 20.0)),
                     RaisedButton(
                       child: Text('Save'),
                       color: Colors.blue[100],
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18),
+                          borderRadius: BorderRadius.circular(15),
                           side: BorderSide(color: Colors.black)),
                       onPressed: () {
                         // save data
@@ -98,7 +156,7 @@ class DropDownButtonGender extends StatefulWidget {
 }
 
 class _DropDownButtonGenderState extends State<DropDownButtonGender> {
-  String dropdownValue = 'Male';
+  String dropdownValue = 'Female';
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +170,7 @@ class _DropDownButtonGenderState extends State<DropDownButtonGender> {
           dropdownValue = newValue;
         });
       },
-      items: <String>['Male', 'Female', 'Others']
+      items: <String>['Female', 'Male', 'Other']
           .map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,

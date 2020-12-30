@@ -11,7 +11,7 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple[100],
+      backgroundColor: Color(0xfff9daeb),
       body: SafeArea(
         child: Container(
           width: double.infinity,
@@ -26,7 +26,7 @@ class SignIn extends StatelessWidget {
                   FadeAnimation(
                       1,
                       Text(
-                        "MemeBuddy",
+                        "Meme Buddy",
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Color(0xFF20124d),
@@ -45,17 +45,17 @@ class SignIn extends StatelessWidget {
                       )),
                 ],
               ),
-              // FadeAnimation(
-              //     1.4,
-              //     Container(
-              //       height: MediaQuery.of(context).size.height / 2.5,
-              //       decoration: BoxDecoration(
-              //         image: DecorationImage(
-              //           image: NetworkImage(
-              //               'https://i.pinimg.com/originals/0e/cf/f4/0ecff498c2c0fb05ee659508afa154ac.gif'),
-              //         ),
-              //       ),
-              //     )),
+              FadeAnimation(
+                  1.4,
+                  Container(
+                    height: MediaQuery.of(context).size.height / 2.5,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage(
+                            'https://cdn.dribbble.com/users/2893989/screenshots/7866867/media/81924c6aaed56d9633011c6444e46898.png?compress=1&resize=1000x750'),
+                      ),
+                    ),
+                  )),
               Column(
                 children: <Widget>[
                   FadeAnimation(
@@ -121,7 +121,7 @@ class SignIn extends StatelessWidget {
                           ),
                         ),
                       )),
-                  SignInButton(),
+                  // SignInButton(),
                 ],
               )
             ],

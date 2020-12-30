@@ -38,6 +38,63 @@ class _MemeState extends State<Meme> {
               constraints: new BoxConstraints(),
               child: Center(
                   child: Column(children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FloatingActionButton.extended(
+                      label: Text('Programming'),
+                      backgroundColor: Colors.pink,
+                      elevation: 0,
+                      onPressed: () {
+                        // Add your onPressed code here!
+                      },
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    FloatingActionButton.extended(
+                      label: Text('Pets'),
+                      elevation: 0,
+                      backgroundColor: Colors.pink,
+                      onPressed: () {
+                        // Add your onPressed code here!
+                      },
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    FloatingActionButton.extended(
+                      label: Text('Cartoons'),
+                      elevation: 0,
+                      backgroundColor: Colors.pink,
+                      onPressed: () {
+                        // Add your onPressed code here!
+                      },
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    FloatingActionButton.extended(
+                      label: Text('Bollywood'),
+                      elevation: 0,
+                      backgroundColor: Colors.pink,
+                      onPressed: () {
+                        // Add your onPressed code here!
+                      },
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    FloatingActionButton.extended(
+                      label: Text('TV'),
+                      elevation: 0,
+                      backgroundColor: Colors.pink,
+                      onPressed: () {
+                        // Add your onPressed code here!
+                      },
+                    )
+                  ],
+                ),
                 Container(
                   height: MediaQuery.of(context).size.height * 0.6,
                   child: new TinderSwapCard(
@@ -77,14 +134,6 @@ class _MemeState extends State<Meme> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // FloatingActionButton(
-                    //   backgroundColor: Colors.white,
-                    //   child: Image.network(
-                    //       'https://cdn.iconscout.com/icon/free/png-256/bookmark-ribbon-mark-favourite-tick-marker-7-3237.png'),
-                    //   onPressed: () {
-                    //     // Add your onPressed code here!
-                    //   },
-                    // ),
                     FloatingActionButton.extended(
                       label: Text('Bookmark'),
                       backgroundColor: Colors.pink,

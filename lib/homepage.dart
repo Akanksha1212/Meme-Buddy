@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:memebuddy/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:memebuddy/pages/meme.dart';
@@ -55,11 +56,138 @@ class _MyHomePageState extends State<MyHomePage> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20.0)),
                               child: Container(
-                                height: 700,
+                                height: 400,
                                 child: Padding(
                                   padding: const EdgeInsets.all(12.0),
                                   child: Column(
-                                    children: [],
+                                    children: [
+                                      GestureDetector(
+                                        child: Card(
+                                          elevation: 10.0,
+                                          child: ListTile(
+                                            leading: Image.network(
+                                                "https://i.dlpng.com/static/png/6720285_preview.png"),
+                                            title: Text(
+                                              'We found a match for you! ',
+                                              style: GoogleFonts.abel(
+                                                textStyle: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                            ),
+                                            trailing: Image.network(
+                                                "https://static.thenounproject.com/png/367821-200.png"),
+                                            subtitle: Text(
+                                                'Vishakha (MemeQuotient : 95)'),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    horizontal: 25,
+                                                    vertical: 10),
+                                          ),
+                                          color: Colors.deepPurple[100],
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(55),
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          // Navigator.push(
+                                          //   context,
+                                          //   MaterialPageRoute(
+                                          //     builder: (context) => Navigation(),
+                                          //   ),
+                                          // );
+                                        },
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      GestureDetector(
+                                        child: Card(
+                                          elevation: 10.0,
+                                          child: ListTile(
+                                            leading: Image.network(
+                                                "https://i.dlpng.com/static/png/6720285_preview.png"),
+                                            title: Text(
+                                              'Hey! A new friend for you ',
+                                              style: GoogleFonts.abel(
+                                                textStyle: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                            ),
+                                            trailing: Image.network(
+                                                "https://static.thenounproject.com/png/367821-200.png"),
+                                            subtitle: Text(
+                                                'Varun (MemeQuotient : 90)'),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    horizontal: 25,
+                                                    vertical: 10),
+                                          ),
+                                          color: Colors.deepPurple[100],
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(55),
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          // Navigator.push(
+                                          //   context,
+                                          //   MaterialPageRoute(
+                                          //     builder: (context) => Navigation(),
+                                          //   ),
+                                          // );
+                                        },
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      GestureDetector(
+                                        child: Card(
+                                          elevation: 10.0,
+                                          child: ListTile(
+                                            leading: Image.network(
+                                                "https://i.dlpng.com/static/png/6720285_preview.png"),
+                                            title: Text(
+                                              'Avi can be your new best friend!!! ',
+                                              style: GoogleFonts.abel(
+                                                textStyle: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                            ),
+                                            trailing: Image.network(
+                                                "https://static.thenounproject.com/png/367821-200.png"),
+                                            subtitle:
+                                                Text('Avi (MemeQuotient : 96)'),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    horizontal: 25,
+                                                    vertical: 10),
+                                          ),
+                                          color: Colors.deepPurple[100],
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(55),
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          // Navigator.push(
+                                          //   context,
+                                          //   MaterialPageRoute(
+                                          //     builder: (context) => Navigation(),
+                                          //   ),
+                                          // );
+                                        },
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
